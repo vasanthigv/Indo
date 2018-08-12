@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About INDO</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="pimg4">
+	<div class="header">
+		<div class="logo">
+		<a href="index.html"><img src="images/logo1.jpg"></a>
+	</div>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="artprojects.html">My Art</a>
+		<a href="#">Contact Details</a>
+	
+	</div>
+	<div class="ptext" style="clear: both;">
+		<span class="border">Contact Us
+		</span>
+	</div>
+</div>
+
+	<div class="social" style="padding: 10px;">
+		<h2 align="center" style="margin-bottom: 20px;"> Connect with us on</h2>
+		<a href="#">Facebook</a>
+		<a href="#">Instagram</a>
+		<a href="#">Twitter</a>
+		<a href="https://soundcloud.com/sagar-176202135/">Sound cloud</a>	
+
+	</div>
+	<div style="margin-top: 20px;">
+	<h2 align="center"> Send us a message</h2>
+	*All fields are mandatory
+	<form name="myform" onsubmit="final()">
+	<div class="form-group">
+		<table class="table table-light">
+			<tr>
+				<td>Name*</td>
+				<td><input type="text" name="name" class="form-control" onblur="valname()" autofocus="autofocus"><span id="txt1"></span></td>
+			</tr>
+			<tr>
+				<td>Email*</td>
+				<td><input type="text" name="email" class="form-control" onblur="valemail()"><span id="txt2"></span></td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><input type="text" name="phone" class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" name="address" class="form-control"></td>
+			</tr>
+			<!--<tr>
+				<td>Message*</td>
+				<td><input type="text" name="message" class="form-control">
+			</tr>-->
+			<tr>
+				<td></td>
+				<td><textarea name="message" onblur="valmsg()" placeholder="Write your message here..."></textarea><span id="txt3"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="Submit" class="btn blackbtn"></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+    </div>
+    <div class="footer">
+	&copy; All rights reserved @INDO 2018
+	</div>
+
+	<script type="text/javascript">
+	function valname()
+{
+	var name1=document.myform.name.value;
+	if(name1=="")
+	{
+		document.getElementById("txt1").innerHTML="  field can't be left empty";
+	}
+}
+	function valemail()
+{
+	var name1=document.myform.email.value;
+	if(name1=="")
+	{
+		document.getElementById("txt2").innerHTML="  field can't be left empty";
+	}
+}
+	function valmsg()
+{
+	var name1=document.myform.message.value;
+	if(name1=="")
+	{
+		document.getElementById("txt3").innerHTML="  field can't be left empty";
+	}
+}
+function final()
+{
+	var name1=document.myform.name.value;
+	var name2=document.myform.email.value;
+	var name3=document.myform.message.value;
+	if(name1==""||name2==""||name3=="")
+	{
+		alert("please enter all the required fields");
+	}
+}
+</script>
+</body>
+</html>
